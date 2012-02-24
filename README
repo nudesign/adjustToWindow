@@ -10,5 +10,6 @@ centralizeW: true;
 centralizeH: true;
 
 PLANNED IMPROVEMENTS
-* Provide further options, like offset from all sides (top, right, bottom and left);
+* Provide an options to specify an offset from all sides (top, right, bottom and left);
+* User-specified sources for originalWidth and originalHeight of the element (not only data-width and data-height);
 * Allow centralizing without image cuts (HTML based resize).
