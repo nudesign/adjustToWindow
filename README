@@ -1,0 +1,14 @@
+jquery-adjustToWindow is a jQuery plugin to set elements dimensions according to window dimensions.
+
+USAGE
+You need to specify the data-width and data-height attributes in the element to be resized and then call $(selector).adjustToWindow(options).
+
+OPTIONS
+Currently, you can only select if the element shall be centralized vertically and/or horizontally, passing an options object.
+
+centralizeW: true;
+centralizeH: true;
+
+PLANNED IMPROVEMENTS
+* Provide further options, like offset from all sides (top, right, bottom and left);
+* Allow centralizing without image cuts (HTML based resize).
