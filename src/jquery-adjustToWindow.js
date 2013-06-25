@@ -1,6 +1,10 @@
 (function( $ ) {
-  $.fn.adjustToWindow = function(options) {
-    
+  $.fn.adjustToWindow = function(options, element) {
+
+    if (element === undefined) {
+      element = window;
+    }
+
     var settings = $.extend({
                               'centralizeW': true,
                               'centralizeH': true
@@ -10,14 +14,14 @@
 
       var object = $(this);
     
-      var iW = object.data('width');
-      var iH = object.data('height');
+      var iW = object.data('width') || object.width();
+      var iH = object.data('height') || object.height();
       var iRatio = iW / iH;
 
       // if (iW === 0 || iH === 0) return;
     
-      var wW = $(window).width();
-      var wH = $(window).height();
+      var wW = $(element).width();
+      var wH = $(element).height();
       var wRatio = wW / wH;
     
       if (iRatio >= wRatio) {
